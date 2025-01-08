@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Counter</title>
+</head>
+<body>
+  <h1>Score Counter</h1>
+  <div>
+    <h2 id="score">0</h2>
+    <button id="increment">Increment</button>
+    <button id="decrement">Decrement</button>
+    <button id="reset">Reset</button>
+  </div>
+  <script>
+    // Get references to HTML elements
+const scoreElement = document.getElementById('score');
+const incrementButton = document.getElementById('increment');
+const decrementButton = document.getElementById('decrement');
+const resetButton = document.getElementById('reset');
+
+// Initialize the score
+let score = 0;
+
+// Update the score display
+function updateScore() {
+  scoreElement.textContent = score;
+}
+
+// Increment the score
+incrementButton.addEventListener('click', () => {
+  score++;
+  updateScore();
+});
+
+// Decrement the score
+
+// Reset the score
+resetButton.addEventListener('click', () => {
+  score = 0;
+  updateScore();
+});
+
+  </script>
+</body>
+</html>
